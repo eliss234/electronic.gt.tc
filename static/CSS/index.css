@@ -1,0 +1,254 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #1a1a2e;
+  box-shadow: 0 0 20px #a64eff88;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #33ccff;
+  text-shadow: 0 0 10px #33ccff;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #a64eff;
+  text-shadow: 0 0 10px #a64eff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #33ccff;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh; /* Reducido para menos espacio */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #33ccff;
+  text-shadow: 0 0 15px #33ccff, 0 0 25px #33ccff;
+}
+
+.hero p {
+  max-width: 600px;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.btn {
+  margin-top: 30px;
+  background: linear-gradient(90deg, #33ccff, #a64eff);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #33ccff, 0 0 25px #a64eff;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px 0;
+    width: 100%;
+  }
+}
+
+/* Player */
+.player {
+  background: #111122;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 500px;
+  box-shadow: 0 0 20px #33ccff44;
+}
+
+.song-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.song-info .cover {
+  font-size: 2rem;
+}
+
+.controls {
+  margin: 15px 0;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.progress .bar {
+  flex: 1;
+  height: 6px;
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress .fill {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, #33ccff, #a64eff);
+}
+
+/* Browse */
+.browse {
+  margin: 20px 0; /* Ajustado el margen */
+}
+
+.browse h2 {
+  margin-bottom: 20px;
+  color: #33ccff;
+  text-shadow: 0 0 10px #33ccff;
+}
+
+.albums {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.album {
+  background: #111122;
+  border-radius: 15px;
+  padding: 20px;
+  width: 120px;
+  box-shadow: 0 0 15px #a64eff44;
+  transition: 0.3s;
+}
+
+.album:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #33ccffaa;
+}
+
+/* Footer */
+footer {
+  background: #0a0a0f;
+  padding: 15px 20px; /* Ajustado el padding */
+  text-align: center;
+  color: #aaa;
+  box-shadow: 0 -5px 20px rgba(166, 78, 255, 0.3);
+}
+
+footer p {
+  margin-top: 10px;
+}
+
+/* Extra ajuste para limpiar márgenes y paddings innecesarios */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+
+
+
+
+.full-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* ocupa casi toda la ventana */
+  width: 100%;
+  background: #0a0a1f; /* fondo oscuro tipo electrónico */
+}
+
+.full-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* mantiene proporciones */
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(95, 39, 205, 0.7), 
+              0 0 50px rgba(72, 219, 251, 0.5);
+}
+

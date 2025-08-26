@@ -1,0 +1,143 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(180deg, #0a0a1f, #1a0033);
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 10, 30, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 2px solid #5f27cd;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #48dbfb;
+  text-shadow: 0 0 10px #48dbfb;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: #5f27cd;
+}
+
+/* ESPACIADOR */
+.spacer {
+  height: 80px; /* altura navbar */
+}
+
+/* SECCIÓN NOSOTROS */
+.about {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  color: #48dbfb;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px #48dbfb, 0 0 30px #5f27cd;
+}
+
+.about p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.about .highlight {
+  color: #5f27cd;
+  font-weight: bold;
+  text-shadow: 0 0 10px #5f27cd;
+}
+
+/* CARD */
+.card {
+  background: rgba(20, 20, 40, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(95, 39, 205, 0.7), 0 0 40px rgba(72, 219, 251, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h2 {
+  color: #48dbfb;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #48dbfb;
+}
+
+.card p {
+  color: #bbb;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0a0a1f;
+  border-top: 2px solid #5f27cd;
+  margin-top: 50px;
+}
+
+footer p {
+  color: #777;
+  font-size: 0.9rem;
+}
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px 0;
+    width: 100%;
+  }
+}

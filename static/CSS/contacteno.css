@@ -1,0 +1,110 @@
+/* Fondo general */
+.contact {
+  background: #0a0a0f;
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: inset 0 0 30px rgba(166, 78, 255, 0.3);
+}
+
+/* Contenedor */
+.contact-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Título */
+.contact h2 {
+  font-size: 2.5rem;
+  color: #33ccff;
+  text-shadow: 0 0 10px #33ccff, 0 0 20px #33ccff;
+  margin-bottom: 10px;
+}
+
+/* Descripción */
+.contact p {
+  margin-bottom: 30px;
+  color: #bbb;
+  font-size: 1rem;
+}
+
+/* Campos del formulario */
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #111122;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 0 10px #a64eff44;
+  transition: 0.3s;
+}
+
+/* Efecto al enfocar */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 15px #33ccff, 0 0 25px #a64eff;
+}
+
+/* Botón con efecto neón */
+.btn-neon {
+  background: linear-gradient(90deg, #33ccff, #a64eff);
+  border: none;
+  padding: 12px 40px;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #33ccff, 0 0 20px #a64eff;
+}
+
+.btn-neon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #33ccff, 0 0 35px #a64eff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  background-color: black;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a64eff;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #bbb;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #33ccff;
+}

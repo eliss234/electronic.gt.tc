@@ -1,0 +1,32 @@
+body {
+  background: linear-gradient(180deg, #0a0a1f, #1a0033);
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Títulos encima de los videos */
+h5 {
+  color: #48dbfb;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #48dbfb, 0 0 20px #5f27cd;
+}
+
+/* Videos */
+.ratio iframe {
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(72, 219, 251, 0.6), 
+              0 0 25px rgba(95, 39, 205, 0.7);
+}
+
+/* Espaciado general */
+main {
+  margin-top: 40px;
+}
+
+/* Responsive: 1 columna en pantallas pequeñas */
+@media (max-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

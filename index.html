@@ -1,107 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/index.css') }}">
-    
-    
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Música Electrónica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/CSS/index.css">
 </head>
 <body>
 
-     <!-- BARRA DE NAVEGACIÓN -->
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #f8c18a;" data-bs-theme="light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="{{ url_for('static', filename='IMG/LOGO_SAOL.png') }}" alt="Logo" width="70" height="70" class="d-inline-block align-text-top" />
-      </a>
-      <a class="navbar-brand" href="#">
-        <h2 style="color: black;"><b>Saol dulcery</b></h2>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <header class="navbar">
+    <div class="logo">Musica electronica</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <nav id="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="contactenos.html">Contáctenos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="mi_musica.html">Mi Música</a>
+    </nav>
+  </header>
 
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="{{ url_for('index') }}"><b>Inicio</b></a></li>
-          <li class="nav-item"><a class="nav-link active" href="{{ url_for('agregar_recetas') }}"><b>Productos</b></a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><b style="color: black;">Menú</b></a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{ url_for('malteadas') }}">Malteadas</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('postres') }}">Postres</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('tortas') }}">Tortas</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('galletas') }}">Galletas</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link active" href="{{ url_for('contactenos') }}"><b>Contactenos</b></a></li>
 
-          <li class="nav-item"><a class="nav-link active" href="{{ url_for('formulario') }}"><b>Usuarios</b></a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<div class="full-image">
+  <img src="static/IMG/principio.PNG" alt="Imagen principal">
+</div>
+
+
+
+
+
+
+
+ 
+  <section class="hero">
+    <h1>Bienvenido a ElectroMusic</h1>
+    <p>Descubre los mejores ritmos de la música electrónica. Dale vida a tu día con sonidos futuristas y vibrantes.</p>
+    
+  </section>
+
+  
+ <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6QuLQmjJXLoyECSmtY78Ko?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+  
+  <section class="browse">
    
+    <div class="albums">
+      <img class="album" src="static/IMG/nota.PNG" alt="">
+      <img class="album" src="static/IMG/disco.png" alt="">
+      <img class="album" src="static/IMG/nota.PNG" alt="">
+    </div>
+  </section>
+
+  <footer>
+    <h2>Musica Electronica</h2>
+    <a href="index.html">Inicio</a>
+    <a href="mi_musica.html">Mi Musica</a>
+    <a href="contactenos.html">Contactenos</a>
+    <a href="nosotros.html">Nosotros</a>
+    <p>© 2025 Musica Electronica</p>
+  </footer>
+
   
   
-  <section class="showcase">
-        <video src="{{ url_for('static', filename='IMG/galleta.mp4') }}" muted loop autoplay></video>
-        <div class="overlay"></div>
-        <div class="text">
-            <h2>DELICIOSAS</h2>
-            <h3>RECETAS</h3>
-            <p>Somos una pagina web donde podras encontrar variedad de recetas sobre pasteleria</p>
-            
-        </div>
-       
-    </section>
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
 
-
-
-<h1 class="text-center mt-4">Recetas que podrás encontrar</h1>
-
-  <!-- TARJETAS -->
-  <div class="cards-container">
-    <div class="card" data-tilt data-tilt-scale="1.05" data-tilt-max="20">
-      <img src="{{ url_for('static', filename='IMG/galletahumo.PNG') }}"  alt="Galletas" />
-      <h5>Galletas</h5>
-    </div>
-    <div class="card" data-tilt data-tilt-scale="1.05" data-tilt-max="20">
-      <img src="{{ url_for('static', filename='IMG/malt.PNG') }}" alt="Malteadas" />
-      <h5>Malteadas</h5>
-    </div>
-    <div class="card" data-tilt data-tilt-scale="1.05" data-tilt-max="20">
-      <img src="{{ url_for('static', filename='IMG/postre.PNG') }}" alt="Postres" />
-      <h5>Postres</h5>
-    </div>
-    <div class="card" data-tilt data-tilt-scale="1.05" data-tilt-max="20">
-      <img src="{{ url_for('static', filename='IMG/TORTA.PNG') }}" alt="Tortas" />
-      <h5>Tortas</h5>
-    </div>
-  </div>
-
-{% include 'footer.html' %}
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
-
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
